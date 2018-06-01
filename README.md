@@ -24,4 +24,7 @@ it has a few denpendencies (healpy, pyvo) and was only tested using python 3
 - Ronald Drimmel
 
 ## Attribution
-Please cite via [ASCL](https://ascl.net/code/v/1981). A paper describing the method is also in preparation.
+A paper is in preparation until then an [ASCL-cite](https://ascl.net/code/v/1981) is available but not yet citeable.
+
+## License
+The package is licensed under the [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
