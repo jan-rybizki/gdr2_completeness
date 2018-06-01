@@ -23,6 +23,5 @@ it has a few denpendencies (healpy, pyvo) and was only tested using python 3
 ## Collaborators
 - Ronald Drimmel
 
-
 ## Attribution
-We will put this software on ASCL and a paper is in preparation.
+Please cite the [ASCL](https://ascl.net/code/v/1981). A paper describing the method is also in preparation.
