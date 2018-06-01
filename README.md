@@ -24,4 +24,4 @@ it has a few denpendencies (healpy, pyvo) and was only tested using python 3
 - Ronald Drimmel
 
 ## Attribution
-Please cite the [ASCL](https://ascl.net/code/v/1981). A paper describing the method is also in preparation.
+Please cite via [ASCL](https://ascl.net/code/v/1981). A paper describing the method is also in preparation.
