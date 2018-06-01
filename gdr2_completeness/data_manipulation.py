@@ -2,7 +2,7 @@ import numpy as np
 import urllib.request
 import os
 
-def download_completeness_maps(folder):
+def download_completeness_maps(folder, also_dr2_all_starcounts = False):
     if not os.path.exists(folder):
         print('folder did not exist before, is created now')
         os.makedirs(folder)
@@ -10,7 +10,8 @@ def download_completeness_maps(folder):
     urllib.request.urlretrieve("https://keeper.mpdl.mpg.de/f/1c4451ef5faa4aad8c78/?dl=1", folder + '15_18.npy')
     urllib.request.urlretrieve("https://keeper.mpdl.mpg.de/f/c724ef1785e644efb80b/?dl=1", folder + '12_15.npy')
     urllib.request.urlretrieve("https://keeper.mpdl.mpg.de/f/96938a21f932487fb0df/?dl=1", folder + '8_12.npy')
-    urllib.request.urlretrieve("https://keeper.mpdl.mpg.de/f/76165998e7e7470193a2/?dl=1", folder + 'dr2_starcounts.npy')
+    if also_dr2_all_starcounts:
+        urllib.request.urlretrieve("https://keeper.mpdl.mpg.de/f/76165998e7e7470193a2/?dl=1", folder + 'dr2_starcounts.npy')
 
 def create_completeness_matrix(folder):
     '''
