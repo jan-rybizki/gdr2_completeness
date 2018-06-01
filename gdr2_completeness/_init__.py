@@ -1,0 +1,2 @@
+from .tap_queries import get_results, gaia_hpx_factor, number_of_healpixels, tap_query_gdr2_hpx_sliced, stack_healpix_files, convert_to_starcount_cube
+from .data_manipulation import create_completeness_matrix, decrease_hpx, total_mag_function, density_sky, last_complete_bin, get_mag_bin, plot_mollweide_log, plot_mollweide_linear, plot_mollweide_linear_mag, download_completeness_maps
