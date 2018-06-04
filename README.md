@@ -21,7 +21,8 @@ it has a few denpendencies (healpy, pyvo) and was only tested using python 3
 - Jan Rybizki (MPIA, rybizki@mpia.de)
 
 ## Collaborators
-- Ronald Drimmel
+- Ronald Drimmel (INAF)
+- Josep Manel Carrasco (University of Barcelona)
 
 ## Attribution
 A paper is in preparation until then an [ASCL-cite](https://ascl.net/code/v/1981) is available but not yet citeable.
