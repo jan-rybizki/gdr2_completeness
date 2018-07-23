@@ -133,7 +133,7 @@ def number_of_healpixels(healpix_number = 1):
     
 ## need flag for single hpx query
 def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
-                              Select_what = 'COUNT(*)', under_condition = 'AND phot_g_mean_mag < 12', verbose = True, test_1st_hpx_only = True):
+                              Select_what = 'COUNT(*)', under_condition = 'AND phot_g_mean_mag < 12', join_text = '', verbose = True, test_1st_hpx_only = True):
     """
     A function that splits GDR2 ADQL queries into hpx chunks using the source_id and saves them in individual files as they arrive from the server into 'folder'.
     
@@ -148,6 +148,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
        folder: Where to store the downloaded data
        Select_what: the ADQL syntax for which rows one is interested, eg. 'parallax, ROUND(phot_g_mean_mag,1) as gmag'
        under_condition = the selection criteria, starting with 'AND' because it follows the healpix condition, for example 'AND phot_g_mean_mag<17 AND astrometric_excess_noise < 1'
+       join_text: An additional entry after the table selection before the WHERE condition which can be used to specify crossmatches to other tables
        verbose: Since the queries can get timely you might want to get some feedback how far the download has proceeded
        test_1st_hpx_only: In order to not overload the services we should first test our query on a single hpx and in case it works and it is what we want we can run the other hpx by setting this to 'False'.
     """
@@ -180,6 +181,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
     Query_text = """ SELECT %s
     FROM
       %s
+      %s
     WHERE source_id BETWEEN %d AND %d
     %s"""
 
@@ -191,7 +193,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
     for i,item in enumerate(list_of_border_source_ids):
         if i == len(list_of_border_source_ids)-1:
             continue
-        QUERIES.append(("%d" %(i),access_url,Query_text %(Select_what,table_name,item,list_of_border_source_ids[i+1],under_condition)))
+        QUERIES.append(("%d" %(i),access_url,Query_text %(Select_what,table_name,join_text,item,list_of_border_source_ids[i+1],under_condition)))
       
     counter = 1
     while len([n for n in os.listdir(folder) if os.path.isfile(folder + n)]) < hpx_number and counter < 4:
