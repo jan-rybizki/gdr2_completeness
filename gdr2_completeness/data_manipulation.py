@@ -61,7 +61,7 @@ def plot_mollweide_log(data):
     import matplotlib.pylab as plt
     norm = LogNorm()
     map_mollweide = data        
-    total = sum(map_mollweide)
+    total = np.nansum(map_mollweide)
     hp.mollview(map_mollweide, cbar = True, min=None, max=None, nest = True,norm = norm, coord= "CG", unit = 'starcount per hpx',notext =True)
     plt.title("total starcount=%d" %(total))        
     plt.show()
