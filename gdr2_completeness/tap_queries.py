@@ -75,7 +75,7 @@ def get_results(QUERIES, folder, verbose = True):
     for short_name, access_url, query in QUERIES:
         if not os.path.isfile(folder + short_name + '.npy'):
             # in async, you first create a job:
-            job = pyvo.dal.TAPService(access_url).submit_job(query.format(**locals()), maxrec=9000000)
+            job = pyvo.dal.TAPService(access_url).submit_job(query.format(**locals()), maxrec=16000000)
             # then start it. This immediately returns.
             job.run()
             # we keep note of the jobs we started -- we'll watch them later.
