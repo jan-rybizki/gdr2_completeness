@@ -25,7 +25,7 @@ it has a few dependencies (healpy, pyvo) and was only tested using python 3
 - Josep Manel Carrasco (University of Barcelona)
 
 ## Attribution
-A paper is in preparation, until then an [ASCL-cite](https://ascl.net/code/v/1981) is available but not yet citeable.
+A paper is in preparation, until then an [ASCL-cite](https://ascl.net/code/v/1981) is available for citation.
 
 ## License
 The package is licensed under the Creative Commons [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
