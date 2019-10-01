@@ -123,14 +123,20 @@ def gaia_hpx_factor(healpix_number = 1):
     OUTPUT:
        the gaia source id factor to get a specific hpx dicretization
     """
-    return(np.power(2,35)*np.power(4,12-healpix_number))
+    if healpix_number == -1:
+        return(6917528997577384321)
+    else:
+        return(np.power(2,35)*np.power(4,12-healpix_number))
 
 def number_of_healpixels(healpix_number = 1):
     """
     returns the number of pixels for a specific level
     """
-    return(np.power(4,healpix_number)*12)
-    
+    if healpix_number == -1:
+        return(1)
+    else:
+        return(np.power(4,healpix_number)*12)
+
 ## need flag for single hpx query
 def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
                               Select_what = 'COUNT(*)', under_condition = 'AND phot_g_mean_mag < 12', join_text = '', verbose = True, test_1st_hpx_only = True):
@@ -144,7 +150,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
            ESA - this is the ESA service (did not seem to work with pyvo so far)
            GDR2light - this is the GAVO service for Gaia DR2 light (only the main columns are included, bad if you need quality flags)
            GDR2mock - this is also hosted by GAVO and contains the GDR2 mock data which is a model Galaxy with a gmag limit of 20.7
-       hpx_level: into how many chunks the catalogue should be chopped. 0 = 12, 1 = 48, 2 = 192 and so on
+       hpx_level: into how many chunks the catalogue should be chopped.-1 = 1, 0 = 12, 1 = 48, 2 = 192 and so on
        folder: Where to store the downloaded data
        Select_what: the ADQL syntax for which rows one is interested, eg. 'parallax, ROUND(phot_g_mean_mag,1) as gmag'
        under_condition = the selection criteria, starting with 'AND' because it follows the healpix condition, for example 'AND phot_g_mean_mag<17 AND astrometric_excess_noise < 1'
@@ -184,7 +190,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
       %s
     WHERE source_id BETWEEN %d AND %d
     %s"""
-
+        
     list_of_border_source_ids = []
     for i in np.arange(hpx_number+1):
         list_of_border_source_ids.append(i*hpx_gaia_factor)
