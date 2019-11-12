@@ -12,6 +12,9 @@ For example for GaiaDR2 extinction extimates were delivered down to G=17. This i
 
 [4] Calculating the magnitude limits of Gaia per healpix for different bands
 
+![](data/g_gdr2.png)
+The all-sky G magnitude limit of GaiaDR2 sources that have BP and RP color. These maps are saved in 'data/maglim_X_in_nside128.npy' for G, BP and RP magnitude limits for healpix level 7 ordered by healpix. Or you can generate them yourself with notebook [3] and [4].
+
 ## Getting started
 The jupyter [tutorial](https://github.com/jan-rybizki/gdr2_completeness/tree/master/tutorials) illustrates the basic usage of this software. It can be inspected in the github repository or you can run it interactively on your local machine.
 
