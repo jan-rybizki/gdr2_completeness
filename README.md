@@ -5,6 +5,13 @@ This package helps with
 
 [2] assembling approximate completeness maps per healpixel and G magnitude bin
 
+![](data/ag_completeness.png)
+For example for GaiaDR2 extinction extimates were delivered down to G=17. This is an all-sky map in Galactic coordinates showing the completeness of all sources with extinction estimate compared to all sources down to 17th Gmag.
+
+[3] Downloading data to assess the magnitude limits per healpix
+
+[4] Calculating the magnitude limits of Gaia per healpix for different bands
+
 ## Getting started
 The jupyter [tutorial](https://github.com/jan-rybizki/gdr2_completeness/tree/master/tutorials) illustrates the basic usage of this software. It can be inspected in the github repository or you can run it interactively on your local machine.
 
