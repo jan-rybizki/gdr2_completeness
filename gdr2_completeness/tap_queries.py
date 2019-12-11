@@ -199,7 +199,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
     for i,item in enumerate(list_of_border_source_ids):
         if i == len(list_of_border_source_ids)-1:
             continue
-        QUERIES.append(("%d" %(i),access_url,Query_text %(Select_what,table_name,join_text,item,list_of_border_source_ids[i+1],under_condition)))
+        QUERIES.append(("%d" %(i),access_url,Query_text %(Select_what,table_name,join_text,item,list_of_border_source_ids[i+1]-1,under_condition)))
       
     counter = 1
     while len([n for n in os.listdir(folder) if os.path.isfile(folder + n)]) < hpx_number and counter < 4:
