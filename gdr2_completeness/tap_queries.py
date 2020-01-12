@@ -175,7 +175,8 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
       'ARI': ('http://gaia.ari.uni-heidelberg.de/tap','gaiadr2.gaia_source'),
       'ESA': ('http://gea.esac.esa.int/tap-server/tap','gaiadr2.gaia_source'),
       'GDR2light': ('http://dc.zah.uni-heidelberg.de/tap','gaia.dr2light'),
-      'GDR2mock': ('http://dc.zah.uni-heidelberg.de/tap','gdr2mock.main'),}
+      'GDR2mock': ('http://dc.zah.uni-heidelberg.de/tap','gdr2mock.main'),
+    'GDR3mock': ('http://dc.zah.uni-heidelberg.de/tap','gdr3mock.generated_data'),}
     access_url, table_name = SERVICES[service]
 
     if not os.path.exists(folder):
