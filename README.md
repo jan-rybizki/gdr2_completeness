@@ -3,7 +3,7 @@ This package helps with
 
 [[1]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B1%5DQuery_GDR2_in_hpx_chunks.ipynb) querying GaiaDR2 TAP services in chunks of healpixel
 
-[2] assembling approximate completeness maps per healpixel and G magnitude bin
+[[2]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B2%5DCompleteness%20tutorial_gdr2_light.ipynb) assembling approximate completeness maps per healpixel and G magnitude bin
 
 ![](data/ag_completeness.png)
 
@@ -11,9 +11,9 @@ For example for GaiaDR2 extinction extimates were delivered down to G=17. This i
 
 ## update in version 1.0 
 
-[3] Downloading data to assess the magnitude limits per healpix
+[[3]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B3%5DDownload%20for%20Gaia%20magnitude%20limit%20over%20the%20sky.ipynb) Downloading data to assess the magnitude limits per healpix
 
-[4] Calculating the magnitude limits of Gaia per healpix for different bands
+[[4]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B4%5D%20GaiaDR2%20magnitude%20limit%20per%20healpix%20in%20different%20photometric%20bands.ipynb) Calculating the magnitude limits of Gaia per healpix for different bands
 
 ![](data/g_gdr2.png)
 
@@ -21,16 +21,16 @@ The all-sky G magnitude limit of GaiaDR2 sources that have BP and RP color. Thes
 
 ## update in version 2.0
 
-[5] Querying the GDR2 RVS selection function
+[[5]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B5%5D%20RVS_selection_function.ipynb) Querying the GDR2 RVS selection function
 
-[6] Estimating the average number of sources from the second telescope
+[[6]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B6%5D%20Second%20telescope%20source%20density%20contribution.ipynb) Estimating the average number of sources from the second telescope
 
 ![](data/rvs_completeness_function.png)
 
 The all-sky completeness of the GDR2_RVS sample with respect to all sources in GDR2 for G = 12.5 mag and GRP = 12.0 mag (corresponding to GRVS = 11.8 mag) as returned by our python function.
 
 ## Getting started
-The jupyter [tutorial](https://github.com/jan-rybizki/gdr2_completeness/tree/master/tutorials) illustrates the basic usage of this software. It can be inspected in the github repository or you can run it interactively on your local machine.
+The jupyter [tutorials](https://github.com/jan-rybizki/gdr2_completeness/tree/master/tutorials) illustrate the basic usage of this software. It can be inspected in the github repository or you can run it interactively on your local machine.
 
 
 ## Installation
