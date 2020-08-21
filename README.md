@@ -1,7 +1,7 @@
 # gdr2_completeness
 This package helps with
 
-[1] querying GaiaDR2 TAP services in chunks of healpixel
+[[1]](https://github.com/jan-rybizki/gdr2_completeness/blob/master/tutorials/%5B1%5DQuery_GDR2_in_hpx_chunks.ipynb) querying GaiaDR2 TAP services in chunks of healpixel
 
 [2] assembling approximate completeness maps per healpixel and G magnitude bin
 
