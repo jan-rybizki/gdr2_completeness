@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='gdr2_completeness',
-      version='0.1',
+      version='2.1',
       description='calculating the completeness for specific GDR2 selection',
       url='http://github.com/jan-rybizki/gdr2_completeness',
       author='Jan Rybizki',
