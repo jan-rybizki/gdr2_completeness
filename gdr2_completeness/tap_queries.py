@@ -151,6 +151,7 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
            GDR2light - this is the GAVO service for Gaia DR2 light (only the main columns are included, bad if you need quality flags)
            GDR2mock - this is also hosted by GAVO and contains the GDR2 mock data which is a model Galaxy with a gmag limit of 20.7
            GeDR3mock - this is also hosted by GAVO and contains the GeDR3mock data which is a new Galaxy model with a gmag limit of 20.7
+           GEDR3light - this is the GAVO service for Gaia EDR3 light including distances by Bailer-Jones+ (2020)
        hpx_level: into how many chunks the catalogue should be chopped.-1 = 1, 0 = 12, 1 = 48, 2 = 192 and so on
        folder: Where to store the downloaded data
        Select_what: the ADQL syntax for which rows one is interested, eg. 'parallax, ROUND(phot_g_mean_mag,1) as gmag'
@@ -177,7 +178,8 @@ def tap_query_gdr2_hpx_sliced(service = "CDS", hpx_level = 1, folder = 'data/',
       'ESA': ('http://gea.esac.esa.int/tap-server/tap','gaiadr2.gaia_source'),
       'GDR2light': ('http://dc.zah.uni-heidelberg.de/tap','gaia.dr2light'),
       'GDR2mock': ('http://dc.zah.uni-heidelberg.de/tap','gdr2mock.main'),
-    'GeDR3mock': ('http://dc.zah.uni-heidelberg.de/tap','gedr3mock.main'),}
+    'GeDR3mock': ('http://dc.zah.uni-heidelberg.de/tap','gedr3mock.main'),
+    'GEDR3light': ('http://dc.zah.uni-heidelberg.de/tap','gedr3dist.litewithdist')}
     access_url, table_name = SERVICES[service]
 
     if not os.path.exists(folder):
