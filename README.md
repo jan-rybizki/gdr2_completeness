@@ -29,6 +29,8 @@ The all-sky G magnitude limit of GaiaDR2 sources that have BP and RP color. Thes
 
 The all-sky completeness of the GDR2_RVS sample with respect to all sources in GDR2 for G = 12.5 mag and GRP = 12.0 mag (corresponding to GRVS = 11.8 mag) as returned by our python function.
 
+For more details on the RVS sample selection function please have a look at our [paper](https://ui.adsabs.harvard.edu/abs/2021MNRAS.500..397R/abstract) and you can also check out [my GalaxyCoffee talk slides](https://github.com/jan-rybizki/gdr2_completeness/blob/master/data/GC_RVS_selection_function_Rybizki.pdf).
+
 ## Getting started
 The jupyter [tutorials](https://github.com/jan-rybizki/gdr2_completeness/tree/master/tutorials) illustrate the basic usage of this software. It can be inspected in the github repository or you can run it interactively on your local machine.
 
@@ -51,7 +53,7 @@ it has a few dependencies (healpy, pyvo) and was only tested using python 3
 ## Attribution
 If you use sofwares in the example tutorials [1] & [2] (first release) please cite [ASCL-cite](https://ascl.net/code/v/1981).
 If you use software in the example tutorials [3] & [4] (v1.0) please cite [GeDR3mock paper](https://ui.adsabs.harvard.edu/abs/2020PASP..132g4501R/abstract).
-If you use software in the example tutorials [5] & [6] (v2.0) please cite [GDR2 selection function](https://arxiv.org/abs/2008.09096).
+If you use software in the example tutorials [5] & [6] (v2.0) please cite [GDR2 selection function](https://ui.adsabs.harvard.edu/abs/2021MNRAS.500..397R/abstract).
 
 
 ## License
